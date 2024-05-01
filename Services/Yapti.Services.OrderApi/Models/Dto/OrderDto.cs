@@ -10,5 +10,7 @@ namespace Yapti.Services.OrderApi.Models.Dto
         public string Description { get; set; }
         public string CategoryName { get; set; }
         public string ImageUrl { get; set; }
+        public string Message { get; set; }
+        public DateTime DeadLine { get; set; } 
     }
 }
