@@ -132,4 +132,8 @@ $RECYCLE.BIN/
 
 _NCrunch*
 /.vs
-/Telegramm_task.Runner/Config
+
+/Services/Yapti.Services.OrderApi/bin
+/Services/Yapti.Services.OrderApi/obj
+/FrontEnd/Yapti.Web/obj
+/FrontEnd/Yapti.Web/bin
