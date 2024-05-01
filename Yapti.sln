@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{99AE467E-8E42-42B8-8052-8E9B3A22BE17}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yapti.Web", "FrontEnd\Yapti.Web\Yapti.Web.csproj", "{EE2C480E-D59A-4C98-A739-9C24045AF247}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E0D51F46-26EC-4290-9D7F-EBCCBCEB9237}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yapti.Services.OrderApi", "Services\Yapti.Services.OrderApi\Yapti.Services.OrderApi.csproj", "{5414E993-8404-49DD-9E9E-8961C8BE50B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE2C480E-D59A-4C98-A739-9C24045AF247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2C480E-D59A-4C98-A739-9C24045AF247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2C480E-D59A-4C98-A739-9C24045AF247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2C480E-D59A-4C98-A739-9C24045AF247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5414E993-8404-49DD-9E9E-8961C8BE50B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5414E993-8404-49DD-9E9E-8961C8BE50B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5414E993-8404-49DD-9E9E-8961C8BE50B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5414E993-8404-49DD-9E9E-8961C8BE50B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CAAB507-3247-4A16-9591-BACEAA07CA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CAAB507-3247-4A16-9591-BACEAA07CA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CAAB507-3247-4A16-9591-BACEAA07CA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CAAB507-3247-4A16-9591-BACEAA07CA02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE2C480E-D59A-4C98-A739-9C24045AF247} = {99AE467E-8E42-42B8-8052-8E9B3A22BE17}
+		{5414E993-8404-49DD-9E9E-8961C8BE50B3} = {E0D51F46-26EC-4290-9D7F-EBCCBCEB9237}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81C30D1C-C5B5-4BBD-B100-941C50D88DE0}
+	EndGlobalSection
+EndGlobal

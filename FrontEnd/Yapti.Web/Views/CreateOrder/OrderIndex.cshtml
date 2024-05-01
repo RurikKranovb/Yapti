@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Yapti.Web.Models.OrderDto>
+
+<br/>
+<div class="container p-4 border">
+    <div class="row pb-2">
+        <div class="col">
+            <h1 class="text-primary">Задания</h1>
+        </div>
+     
+    </div>
+    
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Название:
+            </th>
+            <th>
+                Категория:
+            </th>
+            <th>
+                Цена:
+            </th>
+            <th>
+               Сообщение:
+             </th>
+             <th>
+                Дата:
+             </th>
+            <th></th>
+        </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>
+                    @item.Name
+                </th>
+                <th>
+                    @item.CategoryName
+                </th>
+                <th>
+                    @item.Price.ToString("C")
+                </th>
+                   <th>
+                    @item.Message
+                </th>
+                <th>
+                    @item.DeadLine.Date
+                </th>
+                <th>
+                    <a asp-action="OrderEdit" class="btn btn-success" asp-route-orderId="@item.OrderId">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a asp-action="OrderDelete" class="btn btn-danger" asp-route-orderId="@item.OrderId">
+                        <i class="fas fa-trash"></i>
+                    </a>
+
+                </th>
+                <th></th>
+            </tr>
+        }
+        <tbody/>
+
+        <div class="col text-end pt-2">
+            <a asp-action="OrderCreate" class="btn btn-outline-primary"><i class="fas fa-plus"></i>Создать новое задание</a>
+        </div>
+    </table>
+
+</div>
