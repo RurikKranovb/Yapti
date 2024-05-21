@@ -15,6 +15,26 @@ namespace Yapti.Web
 
             builder.Services.AddScoped<IOrderService, OrderService>();
 
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = "Cookies";
+                options.DefaultChallengeScheme = "oidc";
+
+            })
+               .AddCookie("Cookies", c => c.ExpireTimeSpan = TimeSpan.FromMinutes(10))
+               .AddOpenIdConnect("oidc", option =>
+               {
+                   option.Authority = "https://localhost:7139"; //builder.Configuration["ServiceUrls:IdentityAPI"];
+                   option.GetClaimsFromUserInfoEndpoint = true;
+                   option.ClientId = "mango";
+                   option.ClientSecret = "secret";
+                   option.ResponseType = "code";
+                   option.TokenValidationParameters.NameClaimType = "name";
+                   option.TokenValidationParameters.RoleClaimType = "role";
+                   option.Scope.Add("mango");
+                   option.SaveTokens = true;
+               });
+
 
             builder.Services.AddControllersWithViews();
 
@@ -33,6 +53,7 @@ namespace Yapti.Web
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(

@@ -4,6 +4,7 @@ using Yapti.Web.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Yapti.Web.Controllers
 {
@@ -54,5 +55,17 @@ namespace Yapti.Web.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [Authorize]
+        public async Task<IActionResult> Login()
+        {
+            return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            return SignOut("Cookies", "iodc");
+        }
+
     }
 }
